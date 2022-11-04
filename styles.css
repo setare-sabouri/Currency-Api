@@ -21,7 +21,6 @@ button {
 input {
   padding: 1rem;
   border-radius: 0.5rem;
-  width: 50%;
 }
 span {
   padding: 0.5rem;
@@ -63,26 +62,30 @@ span {
   width: 60%;
   align-items: center;
 }
-.curr-container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
 .all-currencies {
-  background-color: rgba(87, 162, 84, 0.363);
+  background-color: #5f5f5f4d;
   padding: 1rem;
-  margin: 0 1rem;
+  margin: 0 3rem;
+  width: 90%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   border-radius: 0.5rem;
 }
+.curr-container {
+  position: relative;
+  justify-content: center;
+  gap: 3rem;
+}
 #convert-Form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 90%;
-  margin-top: 1rem;
+  width: 60%;
+  gap: 0.5rem;
+}
+#convert-Form input {
+  width: 70%;
 }
 .c-card {
   display: none;
@@ -110,5 +113,11 @@ span {
   }
   .header-title {
     width: 40%;
+  }
+  .all-currencies {
+    width: 60%;
+  }
+  #convert-Form input {
+    width: 33.3%;
   }
 }
