@@ -32,7 +32,7 @@ function displayConvert(data) {
 function displaySymbols(symbols) {
   let enteries = Object.entries(symbols);
   console.log(enteries.length);
-  for (let i = 0; i < enteries.length; i++) {
+  for (let i = 0; i < enteries.length; i++) { //add label later for value of each
     const btn = document.createElement('span');
     btn.innerHTML = enteries[i][0];
     allCurrencies.appendChild(btn);

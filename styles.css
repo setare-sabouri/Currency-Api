@@ -61,6 +61,7 @@ span {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 90%;
   margin-top: 1rem;
 }
 .c-card {
