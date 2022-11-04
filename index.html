@@ -8,21 +8,22 @@
     <title>Document</title>
   </head>
   <body>
-    <header></header>
-    <main>
-      <section>
-        <button id="symbols-btn">All</button>
-        <div class="all-currencies"></div>
-      </section>
-      <section>
-        <form id="convert-Form">
-          <input type="text" name="from" />
-          <input type="text" name="to" />
-          <button id="convert-btn" type="submit">convert</button>
-        </form>
-        <ul id="watch-list"></ul>
-      </section>
-    </main>
+    <section class="screen">
+      <h1>Welcome to Currency Exchange</h1>
+      <button id="symbols-btn">All Currencies</button>
+    </section>
+
+    <section class="screen">
+      <div class="all-currencies"></div>
+      <form id="convert-Form">
+        <input type="text" name="from" />
+        <input type="text" name="to" />
+        <button class="convert-btn" type="submit">convert</button>
+      </form>
+    </section>
+    <!-- <section class="screen">
+      <ul id="watch-list"></ul>
+    </section> -->
     <script src="script.js"></script>
   </body>
 </html>

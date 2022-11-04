@@ -1,4 +1,37 @@
 /* add defaults  */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #5864a0;
+  color: #fff;
+  /* font-family: */
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
 .all-currencies {
   background-color: pink;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: margin 0.5s ease-out;
+}
+.screen.up {
+  margin-top: -100vh;
+}
+button {
+  padding: 2rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+}
+input {
+  padding: 2rem;
 }

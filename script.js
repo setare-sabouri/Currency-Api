@@ -1,6 +1,7 @@
 "use strict";
+const screens = document.querySelectorAll('.screen');
 const symbolsBtn = document.querySelector("#symbols-btn");
-const convertBtn = document.querySelector("#convert-btn");
+const convertBtn = document.querySelector(".convert-btn");
 const allCurrencies = document.querySelector(".all-currencies");
 const cForm = document.querySelector("#convert-Form");
 const watchList = document.querySelector("#watch-list");
@@ -37,7 +38,9 @@ function displaySymbols(symbols) {
     allCurrencies.appendChild(btn);
   }
 }
+
 symbolsBtn.addEventListener('click', function () {
+  screens[0].classList.add('up');
   getCurrency(1);
 });
 convertBtn.addEventListener('click', function () {
@@ -47,3 +50,5 @@ convertBtn.addEventListener('click', function () {
   console.log(from + to);
   getCurrency(2, from, to, 1);
 })
+
+console.log(screens.length);
