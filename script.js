@@ -2,7 +2,7 @@
 const symbolsBtn = document.querySelector("#symbols-btn");
 const convertBtn = document.querySelector("#convert-btn");
 const allCurrencies = document.querySelector(".all-currencies");
-const CnvrtForm = document.querySelector("#convert-Form");
+const cForm = document.querySelector("#convert-Form");
 const watchList = document.querySelector("#watch-list");
 const host = 'api.frankfurter.app';
 //how to handle below func?
@@ -25,7 +25,8 @@ async function getCurrency(flag, from, to, amount) { //what was the name of thes
 
 }
 function displayConvert(data) {
-  console.log(`${data.amount} ${data.base} = ${data.rates.USD} ${Object.keys(data.rates)[0]}`);
+  console.log(`${data.amount} ${data.base} = ${Object.values(data.rates)[0]} ${Object.keys(data.rates)[0]}`);
+
 }
 function displaySymbols(symbols) {
   let enteries = Object.entries(symbols);
@@ -41,6 +42,8 @@ symbolsBtn.addEventListener('click', function () {
 });
 convertBtn.addEventListener('click', function () {
   event.preventDefault();
-
-  getCurrency(2, 'GBP', 'USD', 10);
+  const from = cForm.elements.from.value;
+  const to = cForm.elements.to.value;
+  console.log(from + to);
+  getCurrency(2, from, to, 1);
 })
