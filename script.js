@@ -5,7 +5,9 @@ const allCurrencies = document.querySelector(".all-currencies");
 const CnvrtForm = document.querySelector("#convert-Form");
 const watchList = document.querySelector("#watch-list");
 const host = 'api.frankfurter.app';
-async function getCurrency(flag, from, to) {
+//how to handle below func?
+//seperate each if as a seperated function? ooor what ?
+async function getCurrency(flag, from, to, amount) { //what was the name of these functions? :/
   if (flag === 1) { //to get all currencies
     fetch(`https://${host}/currencies`)
       .then(resp => resp.json())
@@ -13,16 +15,18 @@ async function getCurrency(flag, from, to) {
         displaySymbols(data);
       })
   }
-  if (flag === 2) {
-    fetch(`https://${host}/latest?amount=10&from=GBP&to=USD`)
+  if (flag === 2) { //to convert
+    fetch(`https://${host}/latest?amount=${amount}&from=${from}&to=${to}`)
       .then(resp => resp.json())
       .then((data) => {
-        console.log(`10 GBP = ${data.rates.USD} USD`);
+        displayConvert(data);
       })
   }
 
 }
-
+function displayConvert(data) {
+  console.log(`${data.amount} ${data.base} = ${data.rates.USD} ${Object.keys(data.rates)[0]}`);
+}
 function displaySymbols(symbols) {
   let enteries = Object.entries(symbols);
   console.log(enteries.length);
@@ -37,6 +41,6 @@ symbolsBtn.addEventListener('click', function () {
 });
 convertBtn.addEventListener('click', function () {
   event.preventDefault();
-  const from = C
-  getCurrency(2);
+
+  getCurrency(2, 'GBP', 'USD', 10);
 })
