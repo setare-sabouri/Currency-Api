@@ -1,5 +1,5 @@
 "use strict";
-import { app, db } from "./firebase.js";
+// import { app, db } from "./firebase.js";
 const symbolsBtn = document.querySelector("#symbols-btn");
 const convertBtn = document.querySelector(".convert-btn");
 const allCurrencies = document.querySelector(".all-currencies");
