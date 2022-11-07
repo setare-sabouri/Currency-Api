@@ -8,31 +8,64 @@
     <title>Document</title>
   </head>
   <body>
-    <section class="screen header">
-      <div class="header-title">
-        <h1>Welcome to Currency Exchange</h1>
-        <button id="symbols-btn">Currencies</button>
-      </div>
-      <img
-        src="vecteezy_3d-business-wallet-finance-illustration_10175187_624.png"
-        alt=""
-      />
-    </section>
-    <section class="screen curr-container">
-      <div class="all-currencies"></div>
-      <form id="convert-Form">
-        <input type="text" name="from" placeholder="FROM" />
-        <input type="text" name="to" placeholder="TO" />
-        <button class="convert-btn" type="submit">convert</button>
-      </form>
-      <div class="c-card">
-        <!-- <button>Cancel</button>
-        <button>Add to watch list</button> -->
-      </div>
-    </section>
+    <header class="header-container">
+      <ul>
+        <li><a href="#convert-section">convert</a></li>
+        <li><a href="#searchDate-section">Search by Date</a></li>
+        <li><a href="#watch-section">Watch listt</a></li>
+      </ul>
+    </header>
+    <main class="main-content">
+      <section class="desc-section">
+        <div class="desc-title">
+          <h1>Welcome to Currency Exchange</h1>
+          <p>Convert Rates, Search in history</p>
+          <p>OR even Save it to your Watch list :)</p>
+        </div>
+        <img
+          src="vecteezy_3d-business-wallet-finance-illustration_10175187_624.png"
+          alt=""
+        />
+      </section>
+
+      <section class="currs-section">
+        <h2>All available Currencies</h2>
+        <div class="all-currencies"></div>
+        <button id="symbols-btn">Update</button>
+      </section>
+
+      <section class="convert-section" id="convert-section">
+        <h2>Convert 2 currencies to get their rate...</h2>
+        <form id="convert-Form">
+          <!-- //add amount late as param -->
+          <input type="text" name="from" placeholder="FROM" />
+          <input type="text" name="to" placeholder="TO" />
+          <button class="convert-btn" type="submit">convert</button>
+        </form>
+        <div class="c-card">
+          <button>Cancel</button>
+          <button>Add to watch list</button>
+          <!-- why btns are not displaaying ? how to stop inheritance if ... -->
+        </div>
+      </section>
+      <section class="searchDate-section" id="searchDate-section">
+        <h2>Search by a date duration</h2>
+        <form id="date-form">
+          <input type="date" name="fromDate" />
+          <input type="date" name="toDate" />
+          <button type="submit" id="date-search-btn">Search</button>
+        </form>
+      </section>
+      <section class="watch-section" id="watch-section">
+        watch list under construction
+      </section>
+    </main>
+
     <!-- <section class="screen">
       <ul id="watch-list"></ul>
     </section> -->
-    <script src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>
