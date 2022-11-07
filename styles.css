@@ -9,7 +9,9 @@
 body {
   background-color: #2f2f32;
   color: #fff;
+  font-family: "anybody";
   font-family: "Cutive Mono", monospace;
+  /* fix font style later */
   overflow: scroll;
   --readius: 0.8rem;
   --btnFsize: 1rem;
@@ -17,9 +19,6 @@ body {
 }
 section {
   height: 100vh;
-}
-a {
-  text-decoration: none;
 }
 button {
   padding: var(--btnPadding);
@@ -52,6 +51,10 @@ span {
   border-bottom: 0.1rem solid black;
   margin: auto;
   padding: 1rem 0;
+}
+.header-container ul li a {
+  text-decoration: none;
+  color: #fff;
 }
 .main-content {
   display: flex;
@@ -116,8 +119,10 @@ span {
   width: 70%;
 }
 .c-card {
-  display: none;
+  display: flex;
   flex-direction: column;
+  gap: 1rem;
+  visibility: hidden;
   width: 50%;
   background-color: rgb(12 17 15 / 85%);
   position: absolute;
@@ -126,13 +131,18 @@ span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* transition: all 1s ease-in-out; */
 }
 .active {
-  display: flex;
+  visibility: visible;
 }
-/* .c-card button {
-  margin: auto;
-} */
+.c-card_btns {
+  display: flex;
+  justify-content: space-around;
+}
+.c-card_btns button {
+  padding: 0.5rem;
+}
 .searchDate-section {
   display: flex;
   flex-direction: column;
