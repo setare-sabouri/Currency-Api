@@ -5,6 +5,9 @@ const convertBtn = document.querySelector(".convert-btn");
 const allCurrencies = document.querySelector(".all-currencies");
 const cForm = document.querySelector("#convert-Form");
 const card = document.querySelector(".c-card");
+const cardBtnCancel = document.querySelector("#card-cancel-Btn");
+const cardBtnWatch = document.querySelector("#card-watch-Btn");
+
 const SearchDbtn = document.querySelector('#date-search-btn');
 const dateForm = document.querySelector("#date-form");
 const host = 'api.frankfurter.app';
@@ -27,7 +30,12 @@ async function getCurrency(flag, from, to, amount) { //what was the name of thes
   }
 }
 function displayConvert(data) {
-  card.innerHTML = `${data.amount} ${data.base} = ${Object.values(data.rates)[0]} ${Object.keys(data.rates)[0]}`;
+  card.children[0].innerHTML = `${data.amount} ${data.base} = 
+  ${Object.values(data.rates)[0]} ${Object.keys(data.rates)[0]}`;
+  cardBtnCancel.addEventListener('click', function () {
+    console.log("here");
+    card.classList.remove("active");
+  })
 }
 function displaySymbols(symbols) {
   allCurrencies.innerHTML = "";
