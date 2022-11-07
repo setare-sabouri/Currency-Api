@@ -7,9 +7,9 @@ const cForm = document.querySelector("#convert-Form");
 const card = document.querySelector(".c-card");
 const cardBtnCancel = document.querySelector("#card-cancel-Btn");
 const cardBtnWatch = document.querySelector("#card-watch-Btn");
-
 const SearchDbtn = document.querySelector('#date-search-btn');
 const dateForm = document.querySelector("#date-form");
+const watchContainer = document.querySelector('.watch-section');
 const host = 'api.frankfurter.app';
 //how to handle below func? to make it more readable
 //seperate each if as a seperated function? ooor what ?
@@ -33,9 +33,12 @@ function displayConvert(data) {
   card.children[0].innerHTML = `${data.amount} ${data.base} = 
   ${Object.values(data.rates)[0]} ${Object.keys(data.rates)[0]}`;
   cardBtnCancel.addEventListener('click', function () {
-    console.log("here");
     card.classList.remove("active");
   })
+  cardBtnWatch.addEventListener('click', function () {
+    addToList(data);
+    card.classList.remove("active");
+  });
 }
 function displaySymbols(symbols) {
   allCurrencies.innerHTML = "";
@@ -72,6 +75,11 @@ SearchDbtn.addEventListener('click', function () {
       displayByDate(data);
     })
 })
+function addToList(data) {
+  console.log("in add");
+  watchContainer.innerHTML = data.base;
+
+}
 // dateinput.addEventListener('input', function () {  this is for one date only if needed
 //   const dateFrom = dateinput.value;
 //   console.log(dateFrom);
