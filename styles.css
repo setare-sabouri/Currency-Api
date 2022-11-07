@@ -38,13 +38,15 @@ span {
   margin: 0.2rem;
 }
 
+ul {
+  list-style: none;
+}
 .header-container {
   position: fixed;
   margin: auto;
   width: 100%;
 }
 .header-container ul {
-  list-style: none;
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -150,7 +152,22 @@ span {
   align-items: center;
 }
 .watch-section {
-  background-color: rgb(72, 1, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+#watchList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+#watchList li {
+  background-color: black;
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--readius);
 }
 @media screen and (min-width: 568px) {
   .desc-section img {

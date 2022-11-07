@@ -10,6 +10,8 @@ const cardBtnWatch = document.querySelector("#card-watch-Btn");
 const SearchDbtn = document.querySelector('#date-search-btn');
 const dateForm = document.querySelector("#date-form");
 const watchContainer = document.querySelector('.watch-section');
+const watchList = document.querySelector("#watchList");
+let watchings = [];
 const host = 'api.frankfurter.app';
 //how to handle below func? to make it more readable
 //seperate each if as a seperated function? ooor what ?
@@ -36,8 +38,8 @@ function displayConvert(data) {
     card.classList.remove("active");
   })
   cardBtnWatch.addEventListener('click', function () {
-    addToList(data);
     card.classList.remove("active");
+    addToList(data);
   });
 }
 function displaySymbols(symbols) {
@@ -76,9 +78,18 @@ SearchDbtn.addEventListener('click', function () {
     })
 })
 function addToList(data) {
-  console.log("in add");
-  watchContainer.innerHTML = data.base;
+  const watchItem = document.createElement('li');
+  watchItem.innerHTML = `${data.amount} ${data.base} = 
+  ${Object.values(data.rates)[0]} ${Object.keys(data.rates)[0]}`;
+  watchings.push(watchItem);
+  watchList.innerText = " ";
+  displayWatchList(watchings);
+}
+function displayWatchList(watchings) {
 
+  for (let i = 0; i < watchings.length; i++) {
+    watchList.appendChild(watchings[i]);
+  }
 }
 // dateinput.addEventListener('input', function () {  this is for one date only if needed
 //   const dateFrom = dateinput.value;
