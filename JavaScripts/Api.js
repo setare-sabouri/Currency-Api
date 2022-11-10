@@ -50,7 +50,7 @@ function displayConvert(data) {
 }
 
 function displayByDate(data) {
-    // card[1].children[0].innerHTML = '';
+    card[1].children[0].innerHTML = '';
     // console.log(data);
     const ratesArr = data.rates;
 
