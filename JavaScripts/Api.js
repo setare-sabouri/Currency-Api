@@ -1,7 +1,7 @@
 const host = "api.frankfurter.app";
 const allCurrencies = document.querySelector(".all-currencies");
-const card = document.querySelector(".c-card");
-const cardBtnCancel = document.querySelector(".card-cancel-Btn");
+const card = document.querySelectorAll(".c-card");
+const cardBtnCancel = document.querySelectorAll(".card-cancel-Btn");
 const cardBtnWatch = document.querySelector(".card-watch-Btn");
 
 export async function getAllCurs() {
@@ -34,30 +34,43 @@ function displaySymbols(symbols) {
 }
 
 function displayConvert(data) {
-    card.classList.add("active");
-    card.children[0].innerHTML = `${data.amount} ${data.base} = 
+    card[0].classList.add("active");
+    card[0].children[0].innerHTML = `${data.amount} ${data.base} = 
     ${Object.values(data.rates)[0]} ${Object.keys(data.rates)[0]}`;
-    cardBtnCancel.addEventListener("click", function (e) {
+    cardBtnCancel[0].addEventListener("click", function (e) {
         e.stopPropagation();
-        card.classList.remove("active");
+        card[0].classList.remove("active");
     });
     cardBtnWatch.addEventListener("click", function (e) {
         e.stopPropagation();
-        console.log(card.children[0]);
+        console.log(card[0].children[0]);
         // addToList(data);
-        card.classList.remove("active");
+        card[0].classList.remove("active");
     });
 }
 
 function displayByDate(data) {
-    console.log(data);
+    // card[1].children[0].innerHTML = '';
+    // console.log(data);
     const ratesArr = data.rates;
+
     const dates = Object.keys(ratesArr);
     const nestedrates = Object.values(ratesArr);
     const ratesSymbol = Object.keys(nestedrates[0]);
-    const ratesFee = Object.values(nestedrates[0]);
-    card.classList.add("active");
-    card.children[0].innerHTML = `in date ${dates[0]}
-    : each ${data.amount} ${data.base} = 
-    ${ratesFee[0]} ${ratesSymbol[0]}`;
+    card[1].classList.add("active");
+    for (let i = 0; i < dates.length; i++) {
+        card[1].children[0].innerHTML += `in date ${dates[i]}
+        : each ${data.amount} ${data.base} = 
+        ${Object.values(nestedrates[i])[0]
+            } ${ratesSymbol} <br><br>`;
+    }
+
+    // card[1].children[0].innerHTML += `in date ${dates[0]}
+    // : each ${data.amount} ${data.base} =
+    // ${ratesFee[0]} ${ratesSymbol[1]}`;
+
+    cardBtnCancel[1].addEventListener("click", function (e) {
+        e.stopPropagation();
+        card[1].classList.remove("active");
+    });
 }

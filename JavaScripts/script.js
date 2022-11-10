@@ -26,6 +26,7 @@ SearchDbtn.addEventListener("click", function () {
   const toDate = dateForm.elements.toDate.value;
   convertByDate(fromDate, toDate);
 });
+
 function addToList(data) {
   const watchItem = document.createElement("li");
   watchItem.innerHTML = `${data.amount} ${data.base} = 
@@ -37,6 +38,7 @@ function addToList(data) {
 
   // displayWatchList(watchings);
 }
+
 function displayWatchList(watchings) {
   for (let i = 0; i < watchings.length; i++) {
     // watchList.appendChild(watchings[i]);
