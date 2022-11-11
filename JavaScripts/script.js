@@ -22,9 +22,11 @@ convertBtn.addEventListener("click", function () {
 
 SearchDbtn.addEventListener("click", function () {
   event.preventDefault();
+  const from = dateForm.elements.from.value;
+  const to = dateForm.elements.to.value;
   const fromDate = dateForm.elements.fromDate.value;
   const toDate = dateForm.elements.toDate.value;
-  convertByDate(fromDate, toDate);
+  convertByDate(fromDate, toDate, from, to);
 });
 
 function addToList(data) {

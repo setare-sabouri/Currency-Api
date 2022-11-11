@@ -153,6 +153,16 @@ ul {
   align-items: center;
   position: relative;
 }
+#date-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  justify-content: center;
+  width: 80%;
+}
+#date-form input {
+  width: 45%;
+}
 .watch-section {
   display: flex;
   flex-direction: column;
@@ -187,5 +197,8 @@ ul {
   }
   .c-card {
     width: 50%;
+  }
+  #date-form {
+    width: 40%;
   }
 }
