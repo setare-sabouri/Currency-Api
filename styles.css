@@ -37,7 +37,9 @@ span {
   color: black;
   margin: 0.2rem;
 }
-
+a {
+  color: #fff;
+}
 ul {
   list-style: none;
 }
@@ -181,6 +183,16 @@ ul {
   padding: 1rem;
   border-radius: var(--readius);
 }
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border-top: 0.1rem solid black;
+  width: 90%;
+  margin: auto;
+  color: wheat;
+}
+
 @media screen and (min-width: 568px) {
   .desc-section img {
     display: block;
