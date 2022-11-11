@@ -16,8 +16,8 @@ export async function convert(from, to, amount) {
     const data = await res.json();
     displayConvert(data);
 }
-export async function convertByDate(fromD, toD) {
-    const res = await fetch(`https://${host}/${fromD}..${toD}?to=USD`);
+export async function convertByDate(fromD, toD, fromCur, toCur) {
+    const res = await fetch(`https://${host}/${fromD}..${toD}?from=${fromCur}&to=${toCur}`);
     const data = await res.json();
     displayByDate(data);
 }
@@ -51,9 +51,7 @@ function displayConvert(data) {
 
 function displayByDate(data) {
     card[1].children[0].innerHTML = '';
-    // console.log(data);
     const ratesArr = data.rates;
-
     const dates = Object.keys(ratesArr);
     const nestedrates = Object.values(ratesArr);
     const ratesSymbol = Object.keys(nestedrates[0]);
@@ -64,11 +62,6 @@ function displayByDate(data) {
         ${Object.values(nestedrates[i])[0]
             } ${ratesSymbol} <br><br>`;
     }
-
-    // card[1].children[0].innerHTML += `in date ${dates[0]}
-    // : each ${data.amount} ${data.base} =
-    // ${ratesFee[0]} ${ratesSymbol[1]}`;
-
     cardBtnCancel[1].addEventListener("click", function (e) {
         e.stopPropagation();
         card[1].classList.remove("active");
