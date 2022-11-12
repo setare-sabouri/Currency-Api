@@ -1,7 +1,8 @@
 # Currency-Api	
 Hello and Welcome :)
 
-🧷Api used : Frankfurter
+🧷Api used : https://www.frankfurter.app/docs/
+
 👇Live web👇
 https://currencyconvertfrankfurter.netlify.app/   
 
