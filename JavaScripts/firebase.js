@@ -1,6 +1,6 @@
 const watchContainer = document.querySelector(".watch-section");
 const watchList = document.querySelector("#watchList");
-const apiKey = "";
+
 const key = config.SECRET_API_KEY;
 const firebaseConfig = {
     apiKey: key,
