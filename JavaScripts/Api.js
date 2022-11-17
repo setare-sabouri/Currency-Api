@@ -1,6 +1,7 @@
+import { addToList } from "./firebase.js";
 const host = "api.frankfurter.app";
-const allCurrencies = document.querySelector(".all-currencies");
-const card = document.querySelectorAll(".c-card");
+const allCurrenciesEl = document.querySelector(".all-currencies");
+const card = document.querySelectorAll(".c-card"); //2 diff places
 const cardBtnCancel = document.querySelectorAll(".card-cancel-Btn");
 const cardBtnWatch = document.querySelector(".card-watch-Btn");
 
@@ -22,14 +23,14 @@ export async function convertByDate(fromD, toD, fromCur, toCur) {
     displayByDate(data);
 }
 function displaySymbols(symbols) {
-    allCurrencies.innerHTML = "";
+    allCurrenciesEl.innerHTML = "";
     let enteries = Object.entries(symbols);
     console.log("Updated");
     for (let i = 0; i < enteries.length; i++) {
         // add label later for value of each
         const span = document.createElement("span"); // and rates and date
         span.innerHTML = enteries[i][0];
-        allCurrencies.appendChild(span);
+        allCurrenciesEl.appendChild(span);
     }
 }
 
@@ -43,8 +44,7 @@ function displayConvert(data) {
     });
     cardBtnWatch.addEventListener("click", function (e) {
         e.stopPropagation();
-        console.log(card[0].children[0]);
-        // addToList(data);
+        addToList(data);
         card[0].classList.remove("active");
     });
 }
