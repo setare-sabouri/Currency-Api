@@ -1,7 +1,8 @@
 # Currency-Api	
 Hello and Welcome :)
 
-🧷Api used : Frankfurter
+🧷Api used : https://www.frankfurter.app/docs/
+
 👇Live web👇
 https://currencyconvertfrankfurter.netlify.app/   
 
@@ -14,5 +15,7 @@ including: exchane rate - base currency - considered currency - begining date - 
  
  
  --------------------------------------Updates in progress---------------------------------------
- -Adding a watch list to update on saved data, delete or update each
- -amount is 1 by default , but as an update it can be taken by user
+ 
+  -Adding a watch list to update on saved data, delete or update each
+  
+  -amount is 1 by default , but as an update it can be taken by user
