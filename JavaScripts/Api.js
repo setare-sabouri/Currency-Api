@@ -22,7 +22,7 @@ export async function convertByDate(fromD, toD, fromCur, toCur) {
     const data = await res.json();
     displayByDate(data);
 }
-function displaySymbols(symbols) {
+let displaySymbols = (symbols) => {
     allCurrenciesEl.innerHTML = "";
     let enteries = Object.entries(symbols);
     console.log("Updated");
@@ -33,8 +33,8 @@ function displaySymbols(symbols) {
         allCurrenciesEl.appendChild(span);
     }
 }
-
-function displayConvert(data) {
+//why not const ? why let ?
+let displayConvert = (data) => {
     card[0].classList.add("active");
     card[0].children[0].innerHTML = `${data.amount} ${data.base} = 
     ${Object.values(data.rates)[0]} ${Object.keys(data.rates)[0]}`;
@@ -49,7 +49,7 @@ function displayConvert(data) {
     });
 }
 
-function displayByDate(data) {
+let displayByDate = (data) => {
     card[1].children[0].innerHTML = '';
     const ratesArr = data.rates;
     const dates = Object.keys(ratesArr);
