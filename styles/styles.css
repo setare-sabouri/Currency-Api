@@ -19,6 +19,7 @@ body {
   color: #fff;
   font-family: "Anybody", cursive;
   font-family: "Josefin Sans", sans-serif;
+  overflow: scroll;
 }
 section {
   height: 100vh;
