@@ -1,0 +1,38 @@
+@media screen and (min-width: 430px) and (max-width: 740px) {
+  .desc-section {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  .desc-section img {
+    width: 60%;
+  }
+  .desc-title {
+    font-size: 2.5rem;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 740px) {
+  .desc-section {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  .desc-section img {
+    width: 50%;
+  }
+  .desc-title {
+    width: 40%;
+    font-size: 4rem;
+  }
+  .all-currencies {
+    width: 60%;
+  }
+  #convert-Form input {
+    width: 33.3%;
+  }
+  .c-card {
+    width: 50%;
+  }
+  #date-form {
+    width: 40%;
+  }
+}
