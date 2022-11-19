@@ -73,7 +73,7 @@ ul {
 .desc-section {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   font-size: 2rem;
 }
