@@ -28,3 +28,19 @@ SearchDatebtn.addEventListener("click", function () {
 });
 
 
+document.addEventListener('scroll', toggleHeader);
+
+function toggleHeader() {
+  const header = document.querySelector('.header-container');
+  var scrollPosition = window.scrollY,
+    showHeaderPosition = 570;
+  console.log(scrollPosition);
+  if (scrollPosition >= showHeaderPosition) {
+    header.style.position = 'fixed';
+    header.style.display = 'unset';
+
+
+  } else {
+    header.style.display = 'none';
+  }
+}
