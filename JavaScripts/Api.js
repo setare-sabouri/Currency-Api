@@ -23,15 +23,18 @@ export async function convertByDate(fromD, toD, fromCur, toCur) {
     displayByDate(data);
 }
 let displaySymbols = (symbols) => {
+    console.log("here");
     allCurrenciesEl.innerHTML = "";
     let enteries = Object.entries(symbols);
-    console.log("Updated");
     for (let i = 0; i < enteries.length; i++) {
-        // add label later for value of each
+        // add label later for value of each;
         const span = document.createElement("span"); // and rates and date
-        span.innerHTML = enteries[i][0];
+        span.innerHTML = enteries[i][0]; //sek
+        span.ariaLabel = enteries[i][1]; //SWDEN 
         allCurrenciesEl.appendChild(span);
+
     }
+
 }
 //why not const ? why let ?
 let displayConvert = (data) => {
