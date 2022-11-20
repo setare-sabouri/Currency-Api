@@ -1,20 +1,18 @@
 @media screen and (min-width: 430px) and (max-width: 740px) {
-  .desc-section {
-    flex-direction: row-reverse;
-    justify-content: center;
-  }
   .desc-section img {
-    width: 60%;
+    width: 80%;
   }
   .desc-title {
     font-size: 2.5rem;
     width: 30%;
   }
+  .all-currencies {
+    width: 60%;
+  }
 }
 @media screen and (min-width: 740px) {
   .desc-section {
     flex-direction: row-reverse;
-    justify-content: center;
   }
   .desc-section img {
     width: 50%;
@@ -24,10 +22,13 @@
     font-size: 4rem;
   }
   .all-currencies {
-    width: 60%;
+    width: 50%;
   }
   #convert-Form input {
     width: 33.3%;
+  }
+  #convert-Form button {
+    width: 20%;
   }
   .c-card {
     width: 50%;

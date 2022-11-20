@@ -33,41 +33,46 @@ input {
   border-radius: var(--readius);
 }
 span {
-  padding: 0.5rem;
-  font-size: 1rem;
+  padding: 0.8rem;
+  font-size: 1.5rem;
   border-radius: 0.5rem;
-  background-color: darkgray;
-  color: black;
-  margin: 0.2rem;
-  position: relative;
+  background-color: var(--black);
+  color: white;
 }
-
+span:hover::before {
+  content: attr(aria-label);
+  background: var(--ebony);
+  position: absolute;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  z-index: 1;
+}
 a {
   color: #fff;
 }
 ul {
   list-style: none;
 }
-/* -------------------------------------------------------------------------- */
+/* ---------------------------header----------------------------------------------- */
 .header-container {
-  margin: auto;
   width: 100%;
   display: none;
-  z-index: 1;
 }
 .header-container ul {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 80%;
   background-color: #000000d6;
   border-bottom: 0.1rem solid var(--ebony);
   margin: auto;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 .header-container ul li a {
   text-decoration: none;
-  color: #fff;
+  font-size: 1.8rem;
 }
+/*------------------------main----------------------------------------------------------*/
 .main-content {
   display: flex;
   flex-direction: column;
@@ -79,15 +84,12 @@ ul {
   align-items: center;
   font-size: 2rem;
 }
-
 .desc-title {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 100%;
   align-items: center;
 }
-
 .currs-section {
   display: flex;
   flex-direction: column;
@@ -98,20 +100,18 @@ ul {
   font-size: 2.5rem;
 }
 .all-currencies {
-  background-color: var(--hunterGreen);
-  padding: 1rem;
-  margin: 0 3rem;
-  width: 90%;
+  background-color: var(--ebony);
+  padding: 1.5rem;
+  width: 80%;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   border-radius: 0.5rem;
+  gap: 0.5rem;
 }
-.currs-section button {
-  background-color: var(--stateGreen);
-  color: #fff;
-  font-size: 1.2rem;
+.current-date {
+  font-size: 2rem;
 }
+
 .convert-section {
   display: flex;
   flex-direction: column;
@@ -120,17 +120,25 @@ ul {
   position: relative;
 }
 .convert-section h2 {
-  padding: 0 3rem;
+  padding: 0 4rem;
+  font-size: 2.5rem;
 }
 #convert-Form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 60%;
+  width: 50%;
   gap: 0.5rem;
 }
 #convert-Form input {
-  width: 70%;
+  width: 100%;
+}
+#convert-Form button {
+  width: 100%;
+}
+#convert-Form button:hover {
+  background-color: var(--yellowGreen);
+  color: black;
 }
 .c-card {
   display: flex;
@@ -166,7 +174,7 @@ ul {
   position: relative;
 }
 .searchDate-section h2 {
-  padding: 0 3rem;
+  font-size: 2.5rem;
 }
 #date-form {
   display: flex;
@@ -184,6 +192,9 @@ ul {
   align-items: center;
   gap: 1rem;
 }
+.watch-section h2 {
+  font-size: 2.5rem;
+}
 #watchList {
   display: flex;
   flex-direction: column;
@@ -191,7 +202,7 @@ ul {
   gap: 1rem;
 }
 #watchList li {
-  background-color: black;
+  background-color: var(--ebony);
   width: 100%;
   padding: 1rem;
   border-radius: var(--readius);
@@ -203,7 +214,7 @@ ul {
   display: flex;
   justify-content: center;
   padding: 1rem;
-  border-top: 0.1rem solid black;
+  border-top: 0.1rem solid var(--ebony);
   width: 90%;
   margin: auto;
   color: wheat;

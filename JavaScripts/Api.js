@@ -4,6 +4,7 @@ const allCurrenciesEl = document.querySelector(".all-currencies");
 const card = document.querySelectorAll(".c-card"); //2 diff places
 const cardBtnCancel = document.querySelectorAll(".card-cancel-Btn");
 const cardBtnWatch = document.querySelector(".card-watch-Btn");
+const currentDate = document.querySelector(".current-date");
 
 export async function getAllCurs() {
     const res = await fetch(`https://${host}/currencies`);
@@ -23,17 +24,19 @@ export async function convertByDate(fromD, toD, fromCur, toCur) {
     displayByDate(data);
 }
 let displaySymbols = (symbols) => {
-    console.log("here");
     allCurrenciesEl.innerHTML = "";
     let enteries = Object.entries(symbols);
+    let date = new Date();
     for (let i = 0; i < enteries.length; i++) {
         // add label later for value of each;
         const span = document.createElement("span"); // and rates and date
         span.innerHTML = enteries[i][0]; //sek
         span.ariaLabel = enteries[i][1]; //SWDEN 
         allCurrenciesEl.appendChild(span);
-
     }
+    currentDate.innerHTML = date.toLocaleString();
+    //i need to add more for time and date 
+    //Understand session and local storage
 
 }
 //why not const ? why let ?
