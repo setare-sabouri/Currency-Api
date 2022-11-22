@@ -46,8 +46,8 @@ export let displayByDate = (data) => {
     const ratesSymbol = Object.keys(nestedrates[0]);
     card[1].classList.add("active");
     for (let i = 0; i < dates.length; i++) {
-        card[1].children[0].innerHTML += `in date ${dates[i]}
-        : each ${data.amount} ${data.base} = 
+        card[1].children[0].innerHTML += `In ${dates[i]}
+        --> ${data.amount} ${data.base} = 
         ${Object.values(nestedrates[i])[0]
             } ${ratesSymbol} <br><br>`;
     }

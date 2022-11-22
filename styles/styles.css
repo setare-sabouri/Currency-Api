@@ -146,10 +146,10 @@ ul {
   gap: 1rem;
   visibility: hidden;
   width: 50%;
-  background-color: rgb(12 17 15 / 85%);
+  background-color: var(--ebony);
   position: absolute;
   border-radius: 1rem;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
