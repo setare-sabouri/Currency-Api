@@ -11,6 +11,14 @@
   }
 }
 @media screen and (min-width: 740px) {
+  section h2 {
+    font-size: 4rem;
+    color: var(--yellowGreen);
+    padding: 0 3rem;
+  }
+  span {
+    width: 30%;
+  }
   .desc-section {
     flex-direction: row-reverse;
   }
@@ -34,6 +42,13 @@
     width: 50%;
   }
   #date-form {
+    width: 40%;
+  }
+  .current-date {
+    font-size: 2rem;
+  }
+  #watchList li span {
+    padding: 1.5rem;
     width: 40%;
   }
 }

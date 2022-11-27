@@ -13,6 +13,7 @@
   --readius: 0.8rem;
   --btnFsize: 1rem;
   --btnPadding: 1rem;
+  --middleFonthead: 4rem;
 }
 body {
   background-color: #000000;
@@ -22,6 +23,11 @@ body {
 }
 section {
   height: 100vh;
+}
+section h2 {
+  font-size: 2rem;
+  color: var(--yellowGreen);
+  padding: 0 3rem;
 }
 button {
   padding: var(--btnPadding);
@@ -33,11 +39,13 @@ input {
   border-radius: var(--readius);
 }
 span {
-  padding: 0.8rem;
+  padding: 0.5rem;
   font-size: 1.5rem;
   border-radius: 0.5rem;
   background-color: var(--black);
   color: white;
+  width: 30%;
+  text-align: center;
 }
 span:hover::before {
   content: attr(aria-label);
@@ -96,9 +104,7 @@ ul {
   justify-content: space-evenly;
   align-items: center;
 }
-.currs-section h2 {
-  font-size: 2.5rem;
-}
+
 .all-currencies {
   background-color: var(--ebony);
   padding: 1.5rem;
@@ -106,10 +112,11 @@ ul {
   display: flex;
   flex-wrap: wrap;
   border-radius: 0.5rem;
-  gap: 0.5rem;
+  gap: 0.3rem;
+  justify-content: center;
 }
 .current-date {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .convert-section {
@@ -119,10 +126,7 @@ ul {
   align-items: center;
   position: relative;
 }
-.convert-section h2 {
-  padding: 0 4rem;
-  font-size: 2.5rem;
-}
+
 #convert-Form {
   display: flex;
   flex-wrap: wrap;
@@ -173,10 +177,7 @@ ul {
   align-items: center;
   position: relative;
 }
-.searchDate-section h2 {
-  font-size: 2.5rem;
-  padding: 0 4rem;
-}
+
 #date-form {
   display: flex;
   flex-wrap: wrap;
@@ -198,23 +199,26 @@ ul {
   justify-content: space-evenly;
   gap: 1rem;
 }
-.watch-section h2 {
-  font-size: 2.5rem;
-}
+
 #watchList {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  font-size: 1.2rem;
+  width: 80%;
 }
 #watchList li {
   background-color: var(--ebony);
-  width: 100%;
+
   padding: 1rem;
   border-radius: var(--readius);
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+#watchList li span {
+  padding: 0.5rem;
 }
 .footerContainer {
   display: flex;

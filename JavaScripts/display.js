@@ -12,7 +12,8 @@ export const displaySymbols = (symbols) => {
         span.ariaLabel = enteries[i][1]; //SWDEN 
         allCurrenciesEl.appendChild(span);
     }
-    currentDate.innerHTML = date.toLocaleString();
+    let dateEl = currentDate.appendChild(document.createElement('p'));
+    dateEl.innerHTML = date.toLocaleString();
     //i need to add more for time and date 
     //Understand session and local storage
 
