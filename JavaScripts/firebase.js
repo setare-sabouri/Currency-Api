@@ -16,10 +16,10 @@ export const db = firebase.firestore(app);
 
 //.......................................................
 db.collection("currencies").onSnapshot(function (snapshot) {
-    renderPosts(snapshot.docs);
+    renderList(snapshot.docs);
 });;
 
-function renderPosts(docs) {
+function renderList(docs) {
     watchList.innerHTML = '';
     // Loop through every document in our collection
     for (let doc of docs) {
@@ -28,7 +28,6 @@ function renderPosts(docs) {
         let watchDate = document.createElement('span');
         let watchDetails = document.createElement('p');
         watchDate.innerHTML = data.date;
-        console.log(data);
         watchDetails.innerHTML = ` 1 ${data.from} = ${data.rate} ${data.to}`;
         watchItem.appendChild(watchDate);
         watchItem.appendChild(watchDetails);
@@ -37,12 +36,11 @@ function renderPosts(docs) {
 }
 export function getDocs() {
     db.collection("currencies").onSnapshot(function (snapshot) {
-        renderPosts(snapshot.docs);
+        renderList(snapshot.docs);
     });;
 }
 
 export function addToList(data) {
-    console.log(data);
     db.collection("currencies").add({
         date: data.date,
         from: data.base,
