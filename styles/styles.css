@@ -207,6 +207,7 @@ ul {
   gap: 1rem;
   font-size: 1.2rem;
   width: 80%;
+  overflow-y: scroll;
 }
 #watchList li {
   background-color: var(--ebony);

@@ -5,20 +5,18 @@ const currentDate = document.querySelector(".current-date");
 export const displaySymbols = (symbols) => {
     allCurrenciesEl.innerHTML = "";
     let enteries = Object.entries(symbols);
-    let date = new Date();
     for (let i = 0; i < enteries.length; i++) {
         const span = document.createElement("span");
         span.innerHTML = enteries[i][0]; //sek
         span.ariaLabel = enteries[i][1]; //SWDEN 
         allCurrenciesEl.appendChild(span);
     }
+
+    let date = new Date();
     let dateEl = currentDate.appendChild(document.createElement('p'));
     dateEl.innerHTML = date.toLocaleString();
-    //i need to add more for time and date 
-    //Understand session and local storage
 
 }
-
 const cardBtnWatch = document.querySelector(".card-watch-Btn");
 const card = document.querySelectorAll(".c-card"); //2 diff places
 const cardBtnCancel = document.querySelectorAll(".card-cancel-Btn");
@@ -57,3 +55,4 @@ export let displayByDate = (data) => {
         card[1].classList.remove("active");
     });
 }
+

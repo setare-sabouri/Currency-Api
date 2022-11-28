@@ -1,3 +1,4 @@
+'use strict'
 import { displaySymbols, displayConvert, displayByDate } from "./display.js";
 const host = "api.frankfurter.app";
 
