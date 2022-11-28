@@ -11,7 +11,6 @@ export const displaySymbols = (symbols) => {
         span.ariaLabel = enteries[i][1]; //SWDEN 
         allCurrenciesEl.appendChild(span);
     }
-
     let date = new Date();
     let dateEl = currentDate.appendChild(document.createElement('p'));
     dateEl.innerHTML = date.toLocaleString();
@@ -40,6 +39,7 @@ export const displayConvert = (data) => {
 export let displayByDate = (data) => {
     card[1].children[0].innerHTML = '';
     const ratesArr = data.rates;
+    console.log(typeof (ratesArr));
     const dates = Object.keys(ratesArr);
     const nestedrates = Object.values(ratesArr);
     const ratesSymbol = Object.keys(nestedrates[0]);
