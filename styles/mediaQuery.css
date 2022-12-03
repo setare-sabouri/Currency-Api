@@ -51,9 +51,6 @@
     font-size: 2rem;
   }
   #watchList {
-    width: 70%;
-  }
-  #watchList li span {
-    padding: 1.5rem;
+    width: 45%;
   }
 }

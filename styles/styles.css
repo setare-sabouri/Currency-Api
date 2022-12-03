@@ -212,11 +212,11 @@ ul {
 #watchList li {
   background-color: var(--ebony);
   width: 90%;
-  padding: 0.5rem;
+  padding: 1.5rem 0;
   border-radius: var(--readius);
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 #watchList li span {
   padding: 0.5rem;
