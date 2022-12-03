@@ -5,12 +5,14 @@ const currentDate = document.querySelector(".current-date");
 export const displaySymbols = (symbols) => {
     allCurrenciesEl.innerHTML = "";
     let enteries = Object.entries(symbols);
+    console.log(enteries);
     for (let i = 0; i < enteries.length; i++) {
         const span = document.createElement("span");
         span.innerHTML = enteries[i][0]; //sek
         span.ariaLabel = enteries[i][1]; //SWDEN 
         allCurrenciesEl.appendChild(span);
     }
+
     let date = new Date();
     let dateEl = currentDate.appendChild(document.createElement('p'));
     dateEl.innerHTML = date.toLocaleString();
@@ -45,10 +47,8 @@ export let displayByDate = (data) => {
     const ratesSymbol = Object.keys(nestedrates[0]);
     card[1].classList.add("active");
     for (let i = 0; i < dates.length; i++) {
-        card[1].children[0].innerHTML += `In ${dates[i]}
-        --> ${data.amount} ${data.base} = 
-        ${Object.values(nestedrates[i])[0]
-            } ${ratesSymbol} <br><br>`;
+        card[1].children[0].innerHTML += `In ${dates[i]}--> ${data.amount} ${data.base} = 
+         ${Object.values(nestedrates[i])[0]} ${ratesSymbol} <br><br>`;
     }
     cardBtnCancel[1].addEventListener("click", function (e) {
         e.stopPropagation();

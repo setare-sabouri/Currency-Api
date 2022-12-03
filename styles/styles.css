@@ -206,17 +206,17 @@ ul {
   align-items: center;
   gap: 1rem;
   font-size: 1.2rem;
-  width: 80%;
+  width: 100%;
   overflow-y: scroll;
 }
 #watchList li {
   background-color: var(--ebony);
-
-  padding: 1rem;
+  width: 90%;
+  padding: 0.5rem;
   border-radius: var(--readius);
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-around;
 }
 #watchList li span {
   padding: 0.5rem;

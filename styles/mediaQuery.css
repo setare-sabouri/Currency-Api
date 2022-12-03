@@ -9,6 +9,9 @@
   .all-currencies {
     width: 60%;
   }
+  #watchList {
+    width: 90%;
+  }
 }
 @media screen and (min-width: 740px) {
   section h2 {
@@ -47,8 +50,10 @@
   .current-date {
     font-size: 2rem;
   }
+  #watchList {
+    width: 70%;
+  }
   #watchList li span {
     padding: 1.5rem;
-    width: 40%;
   }
 }
