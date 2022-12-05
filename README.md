@@ -47,6 +47,6 @@ in second functionality where i get a convertion, there is feature to watch on c
  renderList() gets data from currencies collection in order to render.
 
 
-### Updates 
+## Updates 
 + add feature for user to choose amount (by default amount is 1 now )
 * remove from watch list (now is in firebase)
