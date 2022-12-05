@@ -5,11 +5,19 @@ Hello and Welcome :)
 🧷Api used : https://www.frankfurter.app/docs/
 
 👇Live web👇
+
 https://currencyconvertfrankfurter.netlify.app/
+
+## API
 
 Datas Fetched from Open Source Api are All about diffrent Currencies of Available countries
 including: exchane rate - base currency - considered currency - begining date - end date & ...
 
+## Flow
+![Uploading image.png…]()
+
+
+## files functionality description
 ----------------------------------------Api.js-----------------------------------------------------------------------------
 
 💰 Api.js fetchs data based on 3 diffrent end points.
@@ -28,5 +36,6 @@ including: exchane rate - base currency - considered currency - begining date - 
 in second functionality where i get a convertion, there is feature to watch on convertion which adds data to firestore collection (called currencies).
 🔎 renderList() gets data from currencies collection in order to render.
 
+## updates
 --------------------------------------Updates for later--------------------------------------------------------------------------
 +add feature for user to choose amount (by default amount is 1 now )
