@@ -206,20 +206,21 @@ ul {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   width: 100%;
   overflow-y: scroll;
 }
 #watchList li {
   background-color: var(--ebony);
-  width: 90%;
-  padding: 1.5rem 0;
+  width: 80%;
+  padding: 1rem 0;
   border-radius: var(--readius);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 #watchList li span {
+  font-size: 1rem;
   padding: 0.5rem;
 }
 .footerContainer {
