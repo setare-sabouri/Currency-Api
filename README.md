@@ -50,3 +50,4 @@ in second functionality where i get a convertion, there is feature to watch on c
 ## Updates 
 + add feature for user to choose amount (by default amount is 1 now )
 * remove from watch list (now is in firebase)
+* solve ignore p
