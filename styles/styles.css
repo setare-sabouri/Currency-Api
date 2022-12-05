@@ -28,6 +28,7 @@ section h2 {
   font-size: 2rem;
   color: var(--yellowGreen);
   padding: 0 3rem;
+  text-align: center;
 }
 button {
   padding: var(--btnPadding);
