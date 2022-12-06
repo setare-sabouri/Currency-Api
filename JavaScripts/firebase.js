@@ -19,18 +19,20 @@ db.collection("currencies").onSnapshot(function (snapshot) {
     renderList(snapshot.docs);
 });;
 
-function renderList(docs) {
+function renderList(docs) {   // Loop through every document in our collection
     watchList.innerHTML = '';
-    // Loop through every document in our collection
     for (let doc of docs) {
         let data = doc.data();
         let watchItem = document.createElement('li');
         let watchDate = document.createElement('span');
         let watchDetails = document.createElement('p');
+        let removeBtn = document.createElement('button');
+        removeBtn.innerHTML='Remove';
         watchDate.innerHTML = data.date;
         watchDetails.innerHTML = ` 1 ${data.from} = ${data.rate} ${data.to}`;
         watchItem.appendChild(watchDate);
         watchItem.appendChild(watchDetails);
+        watchItem.appendChild(removeBtn)
         watchList.appendChild(watchItem)
     }
 }

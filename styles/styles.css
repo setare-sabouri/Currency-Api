@@ -223,6 +223,11 @@ ul {
   font-size: 1rem;
   padding: 0.5rem;
 }
+#watchList li button {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
 .footerContainer {
   display: flex;
   justify-content: center;
