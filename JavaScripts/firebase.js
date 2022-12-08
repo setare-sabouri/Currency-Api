@@ -1,4 +1,3 @@
-const watchContainer = document.querySelector(".watch-section");
 const watchList = document.querySelector("#watchList");
 
 const key = config.SECRET_API_KEY;
@@ -28,11 +27,12 @@ function renderList(docs) {   // Loop through every document in our collection
         let watchDetails = document.createElement('p');
         let removeBtn = document.createElement('button');
         removeBtn.innerHTML='Remove';
+        removeBtn.classList.add("removeBtn");
         watchDate.innerHTML = data.date;
         watchDetails.innerHTML = ` 1 ${data.from} = ${data.rate} ${data.to}`;
         watchItem.appendChild(watchDate);
         watchItem.appendChild(watchDetails);
-        watchItem.appendChild(removeBtn)
+        // watchItem.appendChild(removeBtn)
         watchList.appendChild(watchItem)
     }
 }
@@ -50,4 +50,6 @@ export function addToList(data) {
         rate: Object.values(data.rates)[0],
     });
 }
+let removeBtns = document.querySelectorAll(".removeBtn");
 
+console.log(removeBtns);

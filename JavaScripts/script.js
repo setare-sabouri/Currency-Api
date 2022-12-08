@@ -24,7 +24,6 @@ SearchDatebtn.addEventListener("click", function () {
 
 
 document.addEventListener('scroll', toggleHeader);
-
 function toggleHeader() {
   const header = document.querySelector('.header-container');
   var scrollPosition = window.scrollY,
@@ -38,3 +37,7 @@ function toggleHeader() {
     header.style.display = 'none';
   }
 }
+
+// for
+// let removeBtns = document.querySelectorAll(".removeBtn");
+// console.log(removeBtns);

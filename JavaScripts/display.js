@@ -5,7 +5,6 @@ const currentDate = document.querySelector(".current-date");
 export const displaySymbols = (symbols) => {
     allCurrenciesEl.innerHTML = "";
     let enteries = Object.entries(symbols);
-    console.log(enteries);
     for (let i = 0; i < enteries.length; i++) {
         const span = document.createElement("span");
         span.innerHTML = enteries[i][0]; //sek
