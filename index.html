@@ -1,86 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/mediaQuery.css" />
-    <title>Currency Exchange</title>
-  </head>
-  <body>
-    <header class="header-container">
-      <ul>
-        <li><a href="#convert-section">convert</a></li>
-        <li><a href="#searchDate-section">Search</a></li>
-        <li><a href="#watch-section">Watch</a></li>
-      </ul>
-    </header>
-    <main class="main-content">
-      <section class="desc-section">
-        <img src="Assets/study-abroad-animate.svg" alt="" />
-        <div class="desc-title">
-          <p>Convert</p>
-          <p>Search</p>
-          <p>Watch</p>
-        </div>
-      </section>
-      <section class="currs-section">
-        <h2>Available Currencies</h2>
-        <div class="current-date"></div>
 
-        <div class="all-currencies"></div>
-      </section>
-      <section class="convert-section" id="convert-section">
-        <h2>Convert 2 currencies to get their rate...</h2>
-        <form id="convert-Form">
-          <input type="text" name="from" placeholder="FROM" />
-          <input type="text" name="to" placeholder="TO" />
-          <button class="convert-btn" type="submit" label="lool">
-            convert
-          </button>
-        </form>
-        <div class="c-card">
-          <p></p>
-          <div class="c-card_btns">
-            <button class="card-cancel-Btn">Cancel</button>
-            <button class="card-watch-Btn">+ Watch</button>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="./Assets/icon.png" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/mediaQuery.css" />
+  <title>Currency Exchange</title>
+</head>
+
+<body>
+  <header class="header-container">
+    <ul>
+      <li><a href="#convert-section">convert</a></li>
+      <li><a href="#searchDate-section">Search</a></li>
+      <li><a href="#watch-section">Watch</a></li>
+    </ul>
+  </header>
+  <main class="main-content">
+    <section class="desc-section">
+      <img src="Assets/study-abroad-animate.svg" alt="" />
+      <div class="desc-title">
+        <p>Convert</p>
+        <p>Search</p>
+        <p>Watch</p>
+      </div>
+    </section>
+    <section class="currs-section">
+      <h2>Available Currencies</h2>
+      <div class="current-date"></div>
+
+      <div class="all-currencies"></div>
+    </section>
+    <section class="convert-section" id="convert-section">
+      <h2>Convert 2 currencies to get their rate...</h2>
+      <form id="convert-Form">
+        <input type="text" name="from" placeholder="FROM" />
+        <input type="text" name="to" placeholder="TO" />
+        <button class="convert-btn" type="submit" label="lool">
+          convert
+        </button>
+      </form>
+      <div class="c-card">
+        <p></p>
+        <div class="c-card_btns">
+          <button class="card-cancel-Btn">Cancel</button>
+          <button class="card-watch-Btn">+ Watch</button>
         </div>
-      </section>
-      <section class="searchDate-section" id="searchDate-section">
-        <h2>Search by a date duration</h2>
-        <form id="date-form">
-          <input type="date" name="fromDate" />
-          <input type="date" name="toDate" />
-          <input type="text" name="from" placeholder="FROM" />
-          <input type="text" name="to" placeholder="TO" />
-          <button type="submit" id="date-search-btn">Search</button>
-        </form>
-        <div class="c-card">
-          <p></p>
-          <div class="c-card_btns">
-            <button class="card-cancel-Btn">Cancel</button>
-          </div>
+      </div>
+    </section>
+    <section class="searchDate-section" id="searchDate-section">
+      <h2>Search by a date duration</h2>
+      <form id="date-form">
+        <input type="date" name="fromDate" />
+        <input type="date" name="toDate" />
+        <input type="text" name="from" placeholder="FROM" />
+        <input type="text" name="to" placeholder="TO" />
+        <button type="submit" id="date-search-btn">Search</button>
+      </form>
+      <div class="c-card">
+        <p></p>
+        <div class="c-card_btns">
+          <button class="card-cancel-Btn">Cancel</button>
         </div>
-      </section>
-      <section class="watch-section" id="watch-section">
-        <h2>Your Watch List :</h2>
-        <ul id="watchList"></ul>
-      </section>
-    </main>
-    <footer class="footerContainer">
-      <a href="https://github.com/setare-sabouri/Currency-Api"
-        ><i class="fa fa-github fa-2x fa_custom"></i
-      ></a>
-    </footer>
-    <script type="text/javascript" src="config.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
-    <script src="JavaScripts/script.js" type="module"></script>
-  </body>
+      </div>
+    </section>
+    <section class="watch-section" id="watch-section">
+      <h2>Your Watch List :</h2>
+      <ul id="watchList"></ul>
+    </section>
+  </main>
+  <footer class="footerContainer">
+    <a href="https://github.com/setare-sabouri/Currency-Api"><i class="fa fa-github fa-2x fa_custom"></i></a>
+  </footer>
+  <script type="text/javascript" src="config.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.13.0/firebase-firestore-compat.js"></script>
+  <script src="JavaScripts/script.js" type="module"></script>
+</body>
+
 </html>
